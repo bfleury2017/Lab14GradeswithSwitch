@@ -23,7 +23,8 @@ namespace Lab14GradeswithSwitch
                     break;
                 }
 
-                getGrade(score);
+                string grade = getGrade(score);
+                Console.WriteLine($"The grade is {grade}");
                 Console.WriteLine();
 
             } while (true);
@@ -43,7 +44,7 @@ namespace Lab14GradeswithSwitch
             return score;
         }
 
-        private static void getGrade(int score)
+        private static string getGrade(int score)
         {
             char suffix = '\0';
             char grade = '\0';
@@ -85,7 +86,7 @@ namespace Lab14GradeswithSwitch
                     break;
             }
 
-            Console.WriteLine($"The grade is {grade}{suffix}");
+            return $"{grade}{suffix}";
 
         }
     }
