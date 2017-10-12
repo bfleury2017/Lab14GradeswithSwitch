@@ -15,7 +15,7 @@ namespace Lab14GradeswithSwitch
 
             do
             {
-                score = validateScore(score, prompt);
+                score = ValidateScore(score, prompt);
 
                 if (score == -1)
                 {
@@ -23,14 +23,14 @@ namespace Lab14GradeswithSwitch
                     break;
                 }
 
-                string grade = getGrade(score);
+                string grade = GetGrade(score);
                 Console.WriteLine($"The grade is {grade}");
                 Console.WriteLine();
 
             } while (true);
         }
 
-        private static int validateScore(int score, string prompt)
+        private static int ValidateScore(int score, string prompt)
         {
             Console.Write(prompt);
             score = int.Parse(Console.ReadLine());
@@ -44,7 +44,7 @@ namespace Lab14GradeswithSwitch
             return score;
         }
 
-        private static string getGrade(int score)
+        private static string GetGrade(int score)
         {
             char suffix = '\0';
             char grade = '\0';
